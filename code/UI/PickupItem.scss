@@ -1,0 +1,13 @@
+PickupItem {
+    opacity: 1;
+    position: absolute;
+    background-color: blue;
+    color: black;
+    border-radius: 15px;
+    border: 2px dashed darkblue;
+
+    &.hidden {
+        transition: all 1s ease-out;
+        opacity: 0;
+    }
+}

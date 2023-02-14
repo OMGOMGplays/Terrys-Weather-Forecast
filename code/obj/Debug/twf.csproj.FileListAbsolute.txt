@@ -1,0 +1,14 @@
+C:\Program Files (x86)\Steam\steamapps\common\sbox\.vs\output\twf.xml
+C:\Program Files (x86)\Steam\steamapps\common\sbox\.vs\output\twf.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\sbox\.vs\output\twf.dll
+C:\Program Files (x86)\Steam\steamapps\common\sbox\.vs\output\twf.pdb
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.dll
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\refint\twf.dll
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\twf.pdb
+C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\twf\code\obj\Debug\ref\twf.dll
