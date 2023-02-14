@@ -35,8 +35,29 @@ namespace TWF.Items.Base
 			SetModel(ItemModel);
 		}
 
+		public override void Simulate( IClient cl )
+		{
+			base.Simulate( cl );
+
+			Log.Info("I am simulating! :)");
+
+			var findInSphere = FindInSphere(Position, 2.0f);
+
+			DebugOverlay.Sphere(Position, 2.0f, Color.Red, 0);
+
+			foreach (Entity entity in findInSphere) 
+			{
+				if (entity is TWFPlayer player) 
+				{
+					OnUse(player);
+				}
+			}
+		}
+
 		public virtual bool OnUse(Entity user)
 		{
+			if (user == null) return false;
+
 			(user as TWFPlayer).ItemInventory.AddItem(this);
 
 			Delete();
@@ -48,6 +69,8 @@ namespace TWF.Items.Base
 
 		public virtual bool IsUsable(Entity user)
 		{
+			if (user == null) return false;
+
 			return true;
 		}
 	}

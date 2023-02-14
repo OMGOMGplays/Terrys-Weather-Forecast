@@ -683,7 +683,7 @@
 				m_nType = "PF_TYPE_LITERAL"
 				m_nMapType = "PF_MAP_TYPE_DIRECT"
 				m_NamedValue = ""
-				m_flLiteralValue = 115.0
+				m_flLiteralValue = 95.0
 				m_nControlPoint = 0
 				m_nScalarAttribute = 3
 				m_nVectorAttribute = 6
@@ -737,7 +737,7 @@
 				m_nType = "PVEC_TYPE_LITERAL_COLOR"
 				m_vLiteralValue = [ 0.0, 0.0, 0.0 ]
 				m_NamedValue = ""
-				m_LiteralColor = [ 66, 255, 36, 255 ]
+				m_LiteralColor = [ 180, 255, 177, 255 ]
 				m_nVectorAttribute = 6
 				m_vVectorAttributeScale = [ 1.0, 1.0, 1.0 ]
 				m_nControlPoint = 0
@@ -938,6 +938,7 @@
 				}
 			}
 			m_bParticleShadows = true
+			m_nColorBlendType = "PARTICLE_COLOR_BLEND_REPLACE"
 		},
 	]
 }
