@@ -1,7 +1,3 @@
-using Sandbox;
-using System;
-using System.Linq;
-
 namespace TWF.Items.Base
 {
     public partial class ItemInventory : BaseInventory 
@@ -23,16 +19,18 @@ namespace TWF.Items.Base
         {
             if (!item.IsValid()) return false;
 
-            OnItemAdded();
+            OnItemAdded(item);
 
             Log.Info($"Item {item.ItemName} has been added!");
 
             return base.Add(item, false);
         }
 
-        public bool OnItemAdded() 
+        public bool OnItemAdded(ItemBase item) 
         {
-            return true;
+            if (item != null) return true;
+
+            return false;
         }
     }
 }

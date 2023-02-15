@@ -1,6 +1,3 @@
-using Sandbox;
-using System.Collections.Generic;
-
 namespace TWF.Weapons.Base
 {
     public partial class TWFWeapon : BaseWeapon 

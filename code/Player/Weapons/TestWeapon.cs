@@ -1,7 +1,3 @@
-using Sandbox;
-
-using TWF.Weapons.Base;
-
 namespace TWF.Weapons
 {
     public partial class TestWeapon : TWFWeapon 

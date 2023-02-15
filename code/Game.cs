@@ -1,8 +1,4 @@
-﻿using Sandbox;
-
-using TWF.UI;
-
-namespace TWF
+﻿namespace TWF
 {
 	public partial class TWFGame : GameManager
     {

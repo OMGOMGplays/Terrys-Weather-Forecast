@@ -1,9 +1,3 @@
-using Sandbox;
-using Sandbox.UI;
-using Sandbox.UI.Construct;
-
-using TWF.Items.Base;
-
 namespace TWF.UI 
 {
     public partial class PickupItem : Panel 
@@ -21,10 +15,11 @@ namespace TWF.UI
         {
             StyleSheet.Load("ui/Pickupitem.scss");
 
-            ItemName = Add.Label("UI", "itemname");
-            ItemDesc = Add.Label("UI", "itemdesc");
+            ItemName = Add.Label("UI Name 1", "itemname");
+            ItemDesc = Add.Label("UI Description 1", "itemdesc");
 
             ItemIconTexture = Add.Panel("itemicon");
+            ItemIconTexture.Style.BackgroundImage = Texture.Load(FileSystem.Mounted, "ui/temp/temp_item_icon.png");
 
             SetClass("hidden", true);
         }  
@@ -35,9 +30,7 @@ namespace TWF.UI
 
             var user = (Game.LocalPawn as TWFPlayer);
 
-            if (Item == null) return;
-
-            if (user.ItemInventory.OnItemAdded()) 
+            if (user.ItemInventory.OnItemAdded(Item) || Input.Pressed(InputButton.Menu)) 
             {
                 DisplayItem(Item);
             }
@@ -46,6 +39,8 @@ namespace TWF.UI
         public void DisplayItem(ItemBase item) 
         {
             SetClass("hidden", false);
+
+            Log.Info("Displaying!");
 
             TimeSinceDisplayed = 0;
 

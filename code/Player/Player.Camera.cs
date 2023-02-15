@@ -1,6 +1,4 @@
-﻿using Sandbox;
-
-namespace TWF
+﻿namespace TWF
 {
 	public partial class TWFPlayer
 	{

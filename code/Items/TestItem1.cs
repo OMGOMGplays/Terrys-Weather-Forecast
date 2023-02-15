@@ -1,7 +1,3 @@
-using Sandbox;
-
-using TWF.Items.Base;
-
 namespace TWF.Items 
 {
     public class TestItem1 : ItemBase 
@@ -11,7 +7,7 @@ namespace TWF.Items
         public override string ItemName => "Test Item 1";
         public override string ItemDesc => "This is a test item!";
 
-        public override ItemRarity ItemRarity => ItemRarity.Legendary;
+        public override ItemRarity ItemRarity => ItemRarity.Common;
 
         public override void Spawn() 
         {

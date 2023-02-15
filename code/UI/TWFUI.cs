@@ -1,7 +1,3 @@
-using Sandbox;
-using Sandbox.UI;
-using Sandbox.UI.Construct;
-
 namespace TWF.UI 
 {
     public partial class TWFUI : HudEntity<RootPanel> 
@@ -19,6 +15,7 @@ namespace TWF.UI
             }
 
             RootPanel.AddChild<PickupItem>();
+            RootPanel.AddChild<MoneyCounter>();
         }
     }
 }

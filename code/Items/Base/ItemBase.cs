@@ -1,8 +1,4 @@
-﻿using Sandbox;
-
-using TWF.UI;
-
-namespace TWF.Items.Base
+﻿namespace TWF.Items.Base
 {
 	public partial class ItemBase : ModelEntity, IUse
 	{
@@ -33,7 +29,18 @@ namespace TWF.Items.Base
 			Log.Info($"Item {ItemName} has been spawned!");
 
 			SetModel(ItemModel);
+
+			PhysicsEnabled = true;
+            UsePhysicsCollision = true;
+            Tags.Add("prop", "solid");
+            SetupPhysics();
 		}
+
+		public void SetupPhysics() 
+        {
+            var physics = SetupPhysicsFromModel(PhysicsMotionType.Static);
+            if (!physics.IsValid()) return;
+        }
 
 		public override void Simulate( IClient cl )
 		{

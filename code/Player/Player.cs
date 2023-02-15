@@ -1,9 +1,4 @@
-﻿using Sandbox;
-
-using TWF.Weapons;
-using TWF.Items.Base;
-
-namespace TWF
+﻿namespace TWF
 {
 	public partial class TWFPlayer : Player
     {
