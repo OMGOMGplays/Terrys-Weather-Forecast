@@ -23,7 +23,16 @@ namespace TWF.Items.Base
         {
             if (!item.IsValid()) return false;
 
+            OnItemAdded();
+
+            Log.Info($"Item {item.ItemName} has been added!");
+
             return base.Add(item, false);
+        }
+
+        public bool OnItemAdded() 
+        {
+            return true;
         }
     }
 }

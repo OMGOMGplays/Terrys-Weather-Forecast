@@ -35,7 +35,9 @@ namespace TWF.UI
 
             var user = (Game.LocalPawn as TWFPlayer);
 
-            if (Item.OnUse(user)) 
+            if (Item == null) return;
+
+            if (user.ItemInventory.OnItemAdded()) 
             {
                 DisplayItem(Item);
             }

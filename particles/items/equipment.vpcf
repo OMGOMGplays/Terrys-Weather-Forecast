@@ -665,13 +665,12 @@
 			_class = "C_OP_Noise"
 			m_nFieldOutput = "1"
 			m_bAdditive = true
-			m_flOutputMax = 1.1
 		},
 		{
 			_class = "C_OP_Noise"
-			m_flOutputMax = 20.0
+			m_flOutputMax = 10.0
 			m_fl4NoiseScale = 1.0
-			m_flOutputMin = 1.0
+			m_flOutputMin = 4.0
 		},
 	]
 	m_ForceGenerators = 
@@ -683,7 +682,7 @@
 				m_nType = "PF_TYPE_LITERAL"
 				m_nMapType = "PF_MAP_TYPE_DIRECT"
 				m_NamedValue = ""
-				m_flLiteralValue = 50.0
+				m_flLiteralValue = 75.0
 				m_nControlPoint = 0
 				m_nScalarAttribute = 3
 				m_nVectorAttribute = 6
@@ -737,7 +736,7 @@
 				m_nType = "PVEC_TYPE_LITERAL_COLOR"
 				m_vLiteralValue = [ 0.0, 0.0, 0.0 ]
 				m_NamedValue = ""
-				m_LiteralColor = [ 251, 42, 42, 255 ]
+				m_LiteralColor = [ 252, 192, 88, 255 ]
 				m_nVectorAttribute = 6
 				m_vVectorAttributeScale = [ 1.0, 1.0, 1.0 ]
 				m_nControlPoint = 0
@@ -988,9 +987,9 @@
 		{
 			_class = "C_OP_RenderBlobs"
 			m_cubeWidth = 1.25
-			m_cutoffRadius = 8.0
-			m_renderRadius = 4.0
-			m_hMaterial = resource:"materials/particles/legendary_blob_mat.vmat"
+			m_cutoffRadius = 7.0
+			m_renderRadius = 3.0
+			m_hMaterial = resource:"materials/particles/equipment_blob_mat.vmat"
 		},
 	]
 }

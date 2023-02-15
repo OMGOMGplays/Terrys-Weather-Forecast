@@ -1,5 +1,6 @@
 ﻿using Sandbox;
 
+using TWF.Weapons;
 using TWF.Items.Base;
 
 namespace TWF
@@ -34,6 +35,8 @@ namespace TWF
 			SetModel( "models/citizen/citizen.vmdl" );
 
 			Controller = new WalkController();
+
+			Inventory.Add(new TestWeapon());
         }
 
 		public override void Simulate( IClient cl )
