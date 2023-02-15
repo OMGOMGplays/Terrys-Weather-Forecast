@@ -2,8 +2,12 @@
 {
 	public partial class TWFGame : GameManager
     {
+		public static TWFGame Instance;
+
 		public TWFGame() 
 		{
+			Instance = this;
+
 			if (Game.IsClient) 
 			{
 				_ = new TWFUI();

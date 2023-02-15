@@ -3,7 +3,7 @@ MoneyCounter {
 
     color: white;
     background-color: rgba(192, 192, 192, 0.708);
-    border: 5px gray dashed;
+    border: 5px gray;
     
     height: 6%;
     width: 15%;
@@ -13,6 +13,7 @@ MoneyCounter {
 
     flex-direction: column;
     align-items: center;
+    align-content: center;
 
     .money {
         font-size: 50px;

@@ -25,11 +25,11 @@
         {
 			base.Respawn();
 
-			Clothing.DressEntity( this );
-
 			SetModel( "models/citizen/citizen.vmdl" );
 
 			Controller = new WalkController();
+
+			Clothing.DressEntity( this );
 
 			Inventory.Add(new TestWeapon());
         }

@@ -17,7 +17,7 @@
 			var pos = center;
 			var rot = Camera.Rotation * Rotation.FromAxis( Vector3.Up, -16 );
 
-			float distance = 130.0f * Scale;
+			float distance = 180.0f;
 			targetPos = pos + rot.Right * ((CollisionBounds.Mins.x + 48) * Scale);
 			targetPos += rot.Forward * -distance;
 
