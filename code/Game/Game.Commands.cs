@@ -70,7 +70,7 @@
 			newTele.Position = Trace.Ray(caller.Pawn.AimRay, 800)
 								.Ignore(caller.Pawn)
 								.Run()
-								.HitPosition + Vector3.Up * 15;
+								.HitPosition;
 		}
 
 		// - Spawn - \\

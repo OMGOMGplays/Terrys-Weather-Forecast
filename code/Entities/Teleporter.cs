@@ -11,11 +11,14 @@ namespace TWF
             base.Spawn();
 
             SetModel("models/temp/teleporter/teleporter_temp.vmdl");
+
+            PhysicsEnabled = false;
+            UsePhysicsCollision = true;
         }
 
         public void TriggerTeleEvent() 
         {
-            // SpawnBoss(); - Not yet even implemented enemy NPCs, do this when it all done
+            // SpawnBoss(); - Haven't even implemented enemy NPCs, do this when it all done
 
             IsInTeleEvent = true;
 
@@ -26,8 +29,15 @@ namespace TWF
         {
             if (IsInTeleEvent) return false;
 
-            IsInTeleEvent = false;
-            return true;
+            Log.Info("Tele event is finished!");
+
+            var user = Game.LocalPawn as TWFPlayer;
+            if (OnUse(user))
+            {
+                return true;
+            }
+
+            return false;
         }   
 
         public override void Simulate(IClient cl) 
@@ -47,8 +57,13 @@ namespace TWF
 
         public virtual bool OnUse(Entity user)
         {
-            TriggerTeleEvent();
-            return true;
+            if (!IsInTeleEvent) 
+            {
+                TriggerTeleEvent();
+                return true;
+            }
+
+            return false;
         }
 
         public virtual bool IsUsable(Entity user) 

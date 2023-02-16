@@ -4,6 +4,8 @@
     {
 		public static TWFGame Instance;
 
+		public static Teleporter Teleporter;
+
 		public TWFGame() 
 		{
 			Instance = this;
@@ -11,6 +13,15 @@
 			if (Game.IsClient) 
 			{
 				_ = new TWFUI();
+			}
+			if (Game.IsServer) 
+			{
+				ChestSpawner chestSpawner = new();
+				chestSpawner.SpawnChests();
+
+				var teleSpawner = new TeleporterSpawner();
+				teleSpawner.SpawnTeleporter();
+				Teleporter = teleSpawner.NewTeleporter;
 			}
 		}
 

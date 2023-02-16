@@ -11,8 +11,15 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						children = 
+						[
+							{
+								_class = "Prefab"
+								target_file = "models/temp/chest/prefabs/chest_temp_hitphys.vmdl_prefab"
+							},
+						]
 						filename = "models\\temp\\chest\\dmx\\mesh\\chest_health.dmx"
-						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_translation = [ 0.0, 0.0, 54.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"

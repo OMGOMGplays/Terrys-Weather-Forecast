@@ -12,7 +12,7 @@
 					{
 						_class = "RenderMeshFile"
 						filename = "models\\temp\\teleporter\\dmx\\mesh\\teleporter_temp.dmx"
-						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_translation = [ 0.0, 0.0, 25.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"
@@ -24,6 +24,161 @@
 							exclude_by_default = false
 							exception_list = [  ]
 						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 124.12368
+						point0 = [ 0.0, 0.0, -0.288606 ]
+						point1 = [ 0.0, 0.0, 16.17725 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ -0.217193, -89.462105, 62.034416 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 19.311077, 45.518799, 92.372238 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 89.568726, -0.16696, 61.876045 ]
+						angles = [ -0.0, 90.0, 0.0 ]
+						dimensions = [ 19.311077, 45.518799, 92.372238 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.017066, 89.616615, 61.876045 ]
+						angles = [ -0.0, 180.0, 0.0 ]
+						dimensions = [ 19.311077, 45.518799, 92.372238 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ -89.925163, 0.077657, 61.876045 ]
+						angles = [ -0.0, 2790.0, 0.0 ]
+						dimensions = [ 19.311077, 45.518799, 92.372238 ]
+					},
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 15.86685
+						point0 = [ 0.0, 0.0, 15.901534 ]
+						point1 = [ 0.0, 0.0, 48.190216 ]
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "Hitbox"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -10.240814, 95.845604, 15.990829 ]
+								hitbox_maxs = [ 10.029867, 112.302521, 78.135887 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -10.240814, 67.328392, 78.42662 ]
+								hitbox_maxs = [ 10.029867, 112.205879, 107.738083 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -10.240814, -112.276382, 15.990829 ]
+								hitbox_maxs = [ 10.029867, -95.819466, 78.135887 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -10.240814, -112.063499, 78.082733 ]
+								hitbox_maxs = [ 10.029867, -68.335236, 107.394196 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -112.294434, -10.046759, 15.990829 ]
+								hitbox_maxs = [ -95.901352, 10.799501, 78.135887 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -112.5354, -10.469515, 78.082733 ]
+								hitbox_maxs = [ -67.080101, 10.572922, 107.742676 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ 66.362091, -10.469515, 78.082733 ]
+								hitbox_maxs = [ 112.006073, 10.572922, 107.742676 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ 95.653259, -10.046759, 15.990829 ]
+								hitbox_maxs = [ 112.046341, 10.799501, 78.135887 ]
+							},
+							{
+								_class = "HitboxCapsule"
+								parent_bone = ""
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								radius = 15.730412
+								point0 = [ 0.0, 0.0, 16.497425 ]
+								point1 = [ 0.0, 0.0, 42.348335 ]
+							},
+						]
 					},
 				]
 			},

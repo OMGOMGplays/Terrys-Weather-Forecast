@@ -38,7 +38,7 @@ namespace TWF
 				case 6: nextMap = "oop.stage_shop"; break;
 			}
 
-			if (TimeSinceChangingStage >= 15.0f) 
+			if (Teleporter.TeleEventFinished()) 
 			{
 				Game.ChangeLevel(nextMap);
 			}
