@@ -2,7 +2,7 @@ namespace TWF.Chests.Base
 {
     public partial class ChestBase : ModelEntity, IUse 
     {
-        public virtual string ChestModel {get; set;}
+        public string ChestModel {get; set;}
 
         public virtual int ChestPrice => 25;
 
@@ -11,6 +11,13 @@ namespace TWF.Chests.Base
         public override void Spawn() 
         {
             base.Spawn();
+
+            switch (ChestType) 
+            {
+                case ChestType.Normal: ChestModel = "models/temp/chest/chest_normal.vmdl"; break;
+                case ChestType.Attack: ChestModel = "models/temp/chest/chest_attack.vmdl"; break;
+                case ChestType.Health: ChestModel = "models/temp/chest/chest_health.vmdl"; break;
+            }
 
             SetModel(ChestModel);
 

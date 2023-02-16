@@ -2,6 +2,10 @@
 {
 	public partial class TWFGame
 	{
+
+		// -- Client --
+
+		// -- Client Give Money
 		[ConCmd.Client("cl_givemoney")]
 		public static void GiveMoneyCommand(int amountToGive) 
 		{
@@ -20,6 +24,9 @@
 			callerPlayer.Money += amountToGive;
 		}
 
+		// - Spawn -
+
+		// - Spawn Item
 		[ConCmd.Client("cl_spawnitem")]
 		public static void SpawnItemCommand(string item) 
 		{
@@ -35,6 +42,7 @@
 								.HitPosition;
 		}
 
+		// - Spawn Chest
 		[ConCmd.Client("cl_spawnchest")]
 		public static void SpawnChestCommand(string chest) 
 		{
@@ -50,13 +58,31 @@
 								.HitPosition;
 		}
 
+		// - Spawn Teleporter
+		[ConCmd.Client("cl_spawnteleporter")]
+		public static void SpawnTeleporterCommand() 
+		{
+			var caller = ConsoleSystem.Caller;
+			if (caller == null) return;
+
+			var newTele = new Teleporter();
+			
+			newTele.Position = Trace.Ray(caller.Pawn.AimRay, 800)
+								.Ignore(caller.Pawn)
+								.Run()
+								.HitPosition + Vector3.Up * 15;
+		}
+
+		// - Spawn - \\
+
+		// -- Give Item --
 		[ConCmd.Client("cl_giveitem")]
 		public static void GiveItemCommand(string item) 
 		{
 			var caller = ConsoleSystem.Caller;
 			if (caller == null) return;
 
-			var callerPlayer = caller as TWFPlayer;
+			var player = Game.LocalPawn as TWFPlayer;
 
 			var listOfItems = new List<ItemBase>();
 
@@ -65,10 +91,15 @@
 			if (item == itemToAdd) 
 			{
 				var itemToAddEntity = listOfItems.Find(x => x.Name == item);
-				callerPlayer.ItemInventory.AddItem(itemToAddEntity);
+				player.ItemInventory.AddItem(itemToAddEntity);
 			}
 		}
 
+		// -- Client -- \\
+
+		// -- Server --
+
+		// -- Change Stage
 		[ConCmd.Server("sv_changestage")]
 		public static void ChangeStageCommand(int nextStage) 
 		{
