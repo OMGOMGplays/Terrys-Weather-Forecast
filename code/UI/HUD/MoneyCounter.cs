@@ -17,7 +17,7 @@ namespace TWF.UI
 
             var player = (Game.LocalPawn as TWFPlayer);
 
-            Money.Text = $"{player.Money}";
+            Money.Text = $"{player.CurrentMoney}";
         }
     }
 }

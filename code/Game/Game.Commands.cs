@@ -114,7 +114,7 @@
 				return;
 			}
 
-			Log.Info($"Changing stage to {nextStage}");
+			Log.Info($"Changing stage to {nextStage}...");
 		}
 	}
 }

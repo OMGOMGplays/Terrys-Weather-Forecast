@@ -991,6 +991,7 @@
 			m_cutoffRadius = 8.0
 			m_renderRadius = 4.0
 			m_hMaterial = resource:"materials/particles/legendary_blob_mat.vmat"
+			m_bDisableOperator = true
 		},
 	]
 }

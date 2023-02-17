@@ -990,6 +990,7 @@
 			m_cutoffRadius = 7.0
 			m_renderRadius = 3.0
 			m_hMaterial = resource:"materials/particles/equipment_blob_mat.vmat"
+			m_bDisableOperator = true
 		},
 	]
 }

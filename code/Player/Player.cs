@@ -44,6 +44,8 @@
 				SimulateAnimation( controller );
 			}
 
+			UpdateMoney();
+
 			TickPlayerUse();
 			SimulateActiveChild( cl, ActiveChild );
 		}

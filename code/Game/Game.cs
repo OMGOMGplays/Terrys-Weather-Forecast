@@ -16,6 +16,8 @@
 			}
 			if (Game.IsServer) 
 			{
+				// PlayStageMusic("temp_stage_music");
+
 				ChestSpawner chestSpawner = new();
 				chestSpawner.SpawnChests();
 

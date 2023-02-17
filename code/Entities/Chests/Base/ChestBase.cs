@@ -31,34 +31,63 @@ namespace TWF.Chests.Base
 
             Tags.Add("prop", "solid");
 
-            // SetupPhysics();
+            SetupPhysics();
         }
 
-        // public void SetupPhysics() 
-        // {
-        //     var physics = SetupPhysicsFromModel(PhysicsMotionType.Dynamic, true);
-        //     if (!physics.IsValid()) return;
-        // }
+        public void SetupPhysics() 
+        {
+            var physics = SetupPhysicsFromModel(PhysicsMotionType.Static, true);
+            if (!physics.IsValid()) return;
+        }
 
         public virtual bool OnUse(Entity user) 
         {
             if (user == null) return false;
 
             var playerUser = user as TWFPlayer;
-            
+
             if (!IsOpened) 
             {
-                if (playerUser.Money < ChestPrice) 
+                if (CheckIfPlayerMoney(user)) 
+                {
+                    OpenChest();
+                    IsOpened = true;
+                    return true;
+                }
+                else if (!CheckIfPlayerMoney(user)) 
                 {
                     FailOpenChest();
                     return false;
                 }
-                else if (playerUser.Money >= ChestPrice) 
-                {
-                    OpenChest();
-                    playerUser.Money -= ChestPrice;
-                    return true;
-                }
+            }
+
+            return false;
+        }
+
+        public override void Simulate(IClient client) 
+        {
+            base.Simulate(client);
+
+            var player = Game.LocalPawn as TWFPlayer;
+            if (player == null) return;
+
+            CheckIfPlayerMoney(player);
+        }
+
+        public bool CheckIfPlayerMoney(Entity user) 
+        {  
+            var playerUser = user as TWFPlayer;
+            if (playerUser == null || !playerUser.IsValid()) return false;
+
+            if (playerUser.CurrentMoney >= ChestPrice) 
+            {
+                Log.Info("Player has money!");
+                return true;
+            }
+            else if (playerUser.CurrentMoney < ChestPrice)
+            {
+                Log.Warning($"Player doesn't have money, they only have {playerUser.CurrentMoney} moneyings!");
+                return false;
             }
 
             return false;

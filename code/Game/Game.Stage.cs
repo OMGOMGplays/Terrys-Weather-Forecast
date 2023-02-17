@@ -43,5 +43,21 @@ namespace TWF
 				Game.ChangeLevel(nextMap);
 			}
 		}
+
+		// public Sound Song;
+
+		// public void PlayStageMusic(string song) 
+		// {
+		// 	Song = PlaySound(song);
+
+		// 	var player = Game.LocalPawn as TWFPlayer;
+
+		// 	Song.SetPosition(player.Position);
+			
+		// 	if (Song.Finished) 
+		// 	{
+		// 		PlayStageMusic(song);
+		// 	}
+		// }
 	}
 }
